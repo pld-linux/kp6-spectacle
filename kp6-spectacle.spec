@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.4
+%define		kdeplasmaver	6.4.5
 %define		qtver		5.15.2
 %define		kpname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		kp6-%{kpname}
-Version:	6.4.4
+Version:	6.4.5
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	51b35f64a4e47bb39d1c27f1e6171ab9
+# Source0-md5:	61b0422fab1ddf0fdb7e8b895d7605f7
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel
@@ -47,6 +47,7 @@ BuildRequires:	qt6-build >= 5.6.0
 BuildRequires:	shared-mime-info
 BuildRequires:	xcb-util-cursor-devel
 Requires(post,postun):	desktop-file-utils
+%requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	ka5-spectacle < 25.04.0
 Obsoletes:	ka6-spectacle < 25.04.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
