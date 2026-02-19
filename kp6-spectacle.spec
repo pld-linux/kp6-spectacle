@@ -9,7 +9,7 @@ Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		kp6-%{kpname}
 Version:	6.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -41,6 +41,7 @@ BuildRequires:	kf6-kwindowsystem-devel >= 5.29.0
 BuildRequires:	kf6-kxmlgui-devel >= 5.29.0
 BuildRequires:	kp6-kpipewire-devel
 BuildRequires:	kp6-kwayland-devel
+BuildRequires:	kquickimageeditor-devel
 BuildRequires:	ninja
 BuildRequires:	opencv-devel
 BuildRequires:	qt6-build >= 5.6.0
