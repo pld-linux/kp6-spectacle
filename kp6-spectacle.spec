@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.7.5
+%define		kdeplasmaver	6.8.0
 %define		qtver		5.15.2
 %define		kpname		spectacle
 
 Summary:	Spectacle
 Summary(pl.UTF-8):	Spectacle
 Name:		kp6-%{kpname}
-Version:	6.7.5
+Version:	6.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	9715bd611173f37dbf7e7b24077c7dc2
+# Source0-md5:	08ede785001c9c1ec730a3efd9f38b8d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel
@@ -41,7 +41,7 @@ BuildRequires:	kf6-kwindowsystem-devel >= 5.29.0
 BuildRequires:	kf6-kxmlgui-devel >= 5.29.0
 BuildRequires:	kp6-kpipewire-devel
 BuildRequires:	kp6-kwayland-devel
-BuildRequires:	kquickimageeditor-devel
+BuildRequires:	kquickimageeditor-devel >= 0.7.0
 BuildRequires:	ninja
 BuildRequires:	opencv-devel
 BuildRequires:	qt6-build >= 5.6.0
@@ -116,6 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kglobalaccel/org.kde.spectacle.desktop
 %{_datadir}/qlogging-categories6/spectacle.categories
 %{systemduserunitdir}/app-org.kde.spectacle.service
+%{_datadir}/config.kcfg/spectacle.kcfg
 %lang(ca) %{_mandir}/ca/man1/spectacle.1*
 %lang(de) %{_mandir}/de/man1/spectacle.1*
 %lang(es) %{_mandir}/es/man1/spectacle.1*
@@ -123,6 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/spectacle.1*
 %lang(nl) %{_mandir}/nl/man1/spectacle.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/spectacle.1*
+%lang(ru) %{_mandir}/ru/man1/spectacle.1*
 %lang(sl) %{_mandir}/sl/man1/spectacle.1*
 %lang(sv) %{_mandir}/sv/man1/spectacle.1*
 %lang(tr) %{_mandir}/tr/man1/spectacle.1*
